@@ -39,7 +39,7 @@ class InformasiBukuController extends Controller
             'judul' => ['required'],
             'halaman' => ['required', 'numeric'],
             'isi' => ['required'],
-            'gambar' => ['required']
+            'gambar' => ['required'],
         ]);
 
         if ($validator->fails()) {
