@@ -1,0 +1,164 @@
+{
+	"info": {
+		"_postman_id": "b32dcfc4-fc94-417f-8c14-5f94620fb4a5",
+		"name": "Sanctum Vue",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:8000/logout",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "X-XSRF-TOKEN",
+						"value": "{{xsrf-cookie}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8000/logout",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8000/login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "X-XSRF-TOKEN",
+						"value": "{{xsrf-cookie}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "admin@mail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "password",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8000/login",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8000/sanctum/csrf-cookie",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8000/sanctum/csrf-cookie",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"sanctum",
+						"csrf-cookie"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8000/api/user",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Referer",
+						"value": "127.0.0.1:8000",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8000/api/user",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"user"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					"pm.sendRequest({",
+					"    url: \"http://localhost:8000/sanctum/csrf-cookie\",",
+					"    method: \"GET\"",
+					"}, function(error, response, {cookies}) {",
+					"    if(!error) {",
+					"        pm.environment.set('xsrf-cookie', cookies.get('XSRF-TOKEN'))",
+					"    }",
+					"})"
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
