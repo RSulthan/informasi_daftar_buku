@@ -12,6 +12,18 @@ pada Project Vue JS di directory informasi_daftar_buku_client
 npm install
 ```
 
+Kemudian melakukan instalasi dependency Laravel sanctum menggunakan composer
+
+```
+composer require laravel/sanctum
+```
+
+Kemudian melakukan instalasi dependency Laravel fortify menggunakan composer
+
+```
+composer require laravel/fortify
+```
+
 Jalankan server Back-End Laravel di directory informasi_daftar_buku_api dengan perintah 
 
 ```
