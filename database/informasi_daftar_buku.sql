@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 08 Okt 2021 pada 10.06
+-- Waktu pembuatan: 29 Okt 2021 pada 02.04
 -- Versi server: 10.4.17-MariaDB
 -- Versi PHP: 8.0.0
 
@@ -60,9 +60,10 @@ CREATE TABLE `informasi_bukus` (
 --
 
 INSERT INTO `informasi_bukus` (`id`, `id_penulis`, `judul`, `isi`, `gambar`, `halaman`, `waktu_buat`, `created_at`, `updated_at`) VALUES
-(13, 4, 'Buku kecoa ngepot edit', 'Buku horror tentang hantu kecoa yang bisa ngedrift dan slalom pakai toyota supra edit', 'kecoa_edit.jpg', 200, '2021-10-07 02:37:08', '2021-10-07 05:26:18', '2021-10-07 05:26:31'),
-(14, 4, 'Tes', 'tes', 'tes.jpg', 200, '2021-10-07 02:37:08', '2021-10-07 18:38:51', '2021-10-07 18:38:51'),
-(15, 1, 'Buku Pedoman Programming Menyenangkan', 'Buku programming yang bikin pembacanya bisa ngoding sambil wisata di pantai', 'programming.jpg', 1000, '2021-10-07 02:37:08', '2021-10-07 23:57:58', '2021-10-07 23:57:58');
+(15, 1, 'Buku Pedoman Programming Menyenangkan', 'Buku programming yang bikin pembacanya bisa ngoding sambil wisata di pantai', 'programming.jpg', 1000, '2021-10-07 02:37:08', '2021-10-07 23:57:58', '2021-10-07 23:57:58'),
+(16, 3, 'tes', 'tes', 'tes.jpg', 200, '2021-10-07 02:37:08', '2021-10-08 01:30:54', '2021-10-08 01:30:54'),
+(18, 1, 'Buku Pedoman Programming Menyenangkan', 'Buku programming yang bikin pembacanya bisa ngoding sambil wisata di pantai', 'programming.jpg', 1000, '2021-10-07 02:37:08', '2021-10-08 01:32:33', '2021-10-08 01:32:33'),
+(20, 1, 'Buku Pedoman Programming Menyenangkan', 'Buku programming yang bikin pembacanya bisa ngoding sambil wisata di pantai', 'programming.jpg', 1000, '2021-10-07 02:37:08', '2021-10-08 02:03:11', '2021-10-08 02:03:11');
 
 -- --------------------------------------------------------
 
@@ -232,7 +233,7 @@ ALTER TABLE `failed_jobs`
 -- AUTO_INCREMENT untuk tabel `informasi_bukus`
 --
 ALTER TABLE `informasi_bukus`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT untuk tabel `informasi_penulis`
