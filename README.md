@@ -33,7 +33,7 @@ php artisan serve
 Kemudian jalankan server Front-End Vue JS di directory informasi_daftar_buku_client
 
 ```
-php run serve
+npm run serve
 ```
 
 ## Dependency
